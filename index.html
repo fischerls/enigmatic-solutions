@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="en" data-theme="signature">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enigmatic Solutions — Handyman & Renovation in Gainesville, FL</title>
+<meta name="description" content="Gainesville, FL handyman & renovation. Licensed, insured, owner-operated by Zak Ford. Free quotes within 24 hours. Integrity meets precision." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Oswald:wght@500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        charcoal: { DEFAULT: '#1a1a1a', 900: '#0f0f0f', 800: '#1a1a1a', 700: '#262626', 600: '#333333' },
+        orange:   { DEFAULT: '#ff6b00', 500: '#ff6b00', 600: '#e85f00', 400: '#ff8a33' },
+        bone:     { DEFAULT: '#f3ede2', 50: '#faf7f1', 100: '#f3ede2', 200: '#e8decb', 300: '#d6c6a8' },
+      },
+      fontFamily: {
+        display:   ['Archivo', 'system-ui', 'sans-serif'],
+        head:      ['Archivo', 'system-ui', 'sans-serif'],
+        body:      ['Inter', 'system-ui', 'sans-serif'],
+        stamp:     ['"Special Elite"', 'Courier', 'monospace'],
+        condensed: ['Oswald', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+
+<style>
+  :root {
+    --accent: #ff6b00;
+    --accent-rgb: 255,107,0;
+    --accent-hover: #e85f00;
+    --accent-on: #1a1a1a;
+    --bg-deep: #1a1a1a;
+    --bg-deep-2: #262626;
+    --bg-warm: #f3ede2;
+    --bg-warm-2: #faf7f1;
+    --fg: #1a1a1a;
+    --fg-inv: #f3ede2;
+    --grid-size: 44px;
+    --head-font: 'Archivo';
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg-warm); color: var(--fg); }
+
+  .font-head, .font-display { font-family: var(--head-font), 'Archivo', system-ui, sans-serif; }
+
+  /* grid overlays */
+  .grid-overlay {
+    background-image:
+      linear-gradient(to right, rgba(var(--accent-rgb),.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--accent-rgb),.5) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+  }
+  .grid-overlay-dim {
+    background-image:
+      linear-gradient(to right, rgba(var(--accent-rgb),.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--accent-rgb),.18) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+  }
+  .grid-overlay-strong {
+    background-image:
+      linear-gradient(to right, rgba(var(--accent-rgb),.7) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--accent-rgb),.7) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+  }
+
+  /* blueprint placeholder stripes */
+  .ph-stripes {
+    background-color: color-mix(in oklab, var(--bg-warm) 80%, #000 20%);
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.06) 0 2px, transparent 2px 14px);
+  }
+  .ph-stripes-dark {
+    background-color: var(--bg-deep-2);
+    background-image: repeating-linear-gradient(45deg, rgba(var(--accent-rgb),.10) 0 2px, transparent 2px 14px);
+  }
+
+  /* corner ticks on framed elements */
+  .corners { position: relative; }
+  .corners::before, .corners::after {
+    content: ''; position: absolute; width: 18px; height: 18px; border: 2px solid var(--accent);
+  }
+  .corners::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .corners::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  /* distressed stamp */
+  .stamp-edge { border: 2px solid currentColor; padding: 6px 14px; position: relative; letter-spacing: .18em; }
+  .stamp-edge::before, .stamp-edge::after {
+    content: ''; position: absolute; inset: -4px; border: 1px dashed currentColor; opacity: .35;
+  }
+  .stamp-edge::after { inset: -8px; opacity: .15; }
+
+  /* CTA */
+  .cta-orange { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
+  .cta-orange:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 10px 30px -10px rgba(var(--accent-rgb),.55); }
+
+  /* ticker */
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-track { animation: ticker 40s linear infinite; }
+
+  /* reveal */
+  .reveal { transition: opacity .7s ease, transform .7s ease; }
+  html.js-ready .reveal { opacity: 0; transform: translateY(16px); }
+  html.js-ready .reveal.in { opacity: 1; transform: none; }
+
+  /* gallery hover zoom */
+  .gallery-item img, .gallery-item .ph { transition: transform .6s ease; }
+  .gallery-item:hover img, .gallery-item:hover .ph { transform: scale(1.06); }
+
+  /* focus */
+  input:focus, textarea:focus, select:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* hide scrollbars on rail */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* orange-on-accent text correction */
+  .bg-orange { background-color: var(--accent); }
+  .text-orange { color: var(--accent); }
+  .border-orange { border-color: var(--accent); }
+  .hover\:bg-orange:hover { background-color: var(--accent); }
+  .hover\:text-orange:hover { color: var(--accent); }
+  .hover\:border-orange:hover { border-color: var(--accent); }
+
+  /* testimonial slide transition */
+  .t-cards { transition: opacity .4s ease; }
+  .t-cards.swapping { opacity: 0; }
+</style>
+</head>
+
+<body class="antialiased bg-bone-100 text-charcoal-900">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-charcoal-900 transition-all duration-300">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div id="header-row" class="flex items-center justify-between h-20 transition-all">
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-orange flex items-center justify-center text-charcoal-900 font-head font-black text-lg rotate-3 group-hover:rotate-0 transition-transform">ES</div>
+        <div class="leading-tight">
+          <div class="text-bone-100 font-head font-black text-sm md:text-base uppercase tracking-wider">Enigmatic Solutions</div>
+          <div class="text-orange font-stamp text-[9px] md:text-[10px] tracking-[0.3em] uppercase">Handyman · Gainesville FL</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#services" class="nav-link text-bone-100/80 hover:text-orange text-[11px] font-bold uppercase font-head tracking-[0.14em] transition-colors relative group">Services<span class="absolute -bottom-1 left-0 right-0 h-[2px] bg-orange scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span></a>
+        <a href="#projects" class="nav-link text-bone-100/80 hover:text-orange text-[11px] font-bold uppercase font-head tracking-[0.14em] transition-colors relative group">Projects<span class="absolute -bottom-1 left-0 right-0 h-[2px] bg-orange scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span></a>
+        <a href="#reviews" class="nav-link text-bone-100/80 hover:text-orange text-[11px] font-bold uppercase font-head tracking-[0.14em] transition-colors relative group">Reviews<span class="absolute -bottom-1 left-0 right-0 h-[2px] bg-orange scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span></a>
+        <a href="#area" class="nav-link text-bone-100/80 hover:text-orange text-[11px] font-bold uppercase font-head tracking-[0.14em] transition-colors relative group">Service Area<span class="absolute -bottom-1 left-0 right-0 h-[2px] bg-orange scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span></a>
+        <a href="#contact" class="nav-link text-bone-100/80 hover:text-orange text-[11px] font-bold uppercase font-head tracking-[0.14em] transition-colors relative group">Contact<span class="absolute -bottom-1 left-0 right-0 h-[2px] bg-orange scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span></a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:9123240658" class="flex items-center gap-2 text-bone-100/80 hover:text-orange text-xs font-bold">
+          <i data-icon="phone" data-size="16"></i> (912) 324-0658
+        </a>
+        <a href="#contact" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-4 py-2 text-xs">
+          Request a Quote <i data-icon="arrow" data-size="14" data-stroke="2.2"></i>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-bone-100 p-2" aria-label="Menu" aria-expanded="false">
+        <i data-icon="menu" data-size="26" id="mobile-menu-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden overflow-hidden transition-all duration-300 bg-charcoal-900 border-t border-white/5 max-h-0">
+    <div class="px-5 py-6 flex flex-col gap-1">
+      <a href="#services" class="mobile-link text-bone-100/90 hover:text-orange py-3 border-b border-white/5 font-head font-bold uppercase text-sm tracking-wider flex items-center justify-between">Services <i data-icon="arrow" data-size="14"></i></a>
+      <a href="#projects" class="mobile-link text-bone-100/90 hover:text-orange py-3 border-b border-white/5 font-head font-bold uppercase text-sm tracking-wider flex items-center justify-between">Projects <i data-icon="arrow" data-size="14"></i></a>
+      <a href="#reviews" class="mobile-link text-bone-100/90 hover:text-orange py-3 border-b border-white/5 font-head font-bold uppercase text-sm tracking-wider flex items-center justify-between">Reviews <i data-icon="arrow" data-size="14"></i></a>
+      <a href="#area" class="mobile-link text-bone-100/90 hover:text-orange py-3 border-b border-white/5 font-head font-bold uppercase text-sm tracking-wider flex items-center justify-between">Service Area <i data-icon="arrow" data-size="14"></i></a>
+      <a href="#contact" class="mobile-link text-bone-100/90 hover:text-orange py-3 border-b border-white/5 font-head font-bold uppercase text-sm tracking-wider flex items-center justify-between">Contact <i data-icon="arrow" data-size="14"></i></a>
+      <a href="tel:9123240658" class="mt-4 flex items-center gap-2 text-bone-100 text-sm font-bold"><i data-icon="phone" data-size="16"></i> (912) 324-0658</a>
+      <a href="#contact" class="cta-orange mt-3 inline-flex justify-center items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-6 py-3 text-sm mobile-link">Request a Quote <i data-icon="arrow" data-size="14" data-stroke="2.2"></i></a>
+    </div>
+  </div>
+
+  <div class="hidden md:block bg-charcoal-800/80 border-t border-white/5">
+    <div class="max-w-[1400px] mx-auto px-5 md:px-8 py-1.5 flex items-center justify-between text-[10px] font-stamp tracking-[0.3em] uppercase text-bone-200/60">
+      <span>Licensed · Insured · Gainesville, FL</span>
+      <span class="flex items-center gap-1.5 text-orange">
+        <i data-icon="star" data-size="10"></i><i data-icon="star" data-size="10"></i><i data-icon="star" data-size="10"></i><i data-icon="star" data-size="10"></i><i data-icon="star" data-size="10"></i>
+        <span class="text-bone-200/60 ml-1">5.0 · Local Reviews</span>
+      </span>
+      <span>Est. 2024 · Integrity Meets Precision</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO (split / warm) ============ -->
+<section id="top" class="relative bg-bone-100 overflow-hidden pt-28 md:pt-36 pb-20 md:pb-28">
+  <div class="absolute inset-0 grid-overlay-dim pointer-events-none"></div>
+
+  <div class="hidden md:flex absolute top-28 right-6 items-center gap-2 font-stamp text-xs tracking-[0.4em] uppercase text-charcoal-700 rotate-90 origin-top-right">
+    <span class="h-px w-12 bg-current"></span> EST · 2024 · GNV · FL
+  </div>
+
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8 grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
+    <!-- LEFT -->
+    <div>
+      <div class="reveal">
+        <div class="inline-flex items-center gap-3 font-stamp text-[11px] tracking-[0.35em] uppercase text-orange mb-6">
+          <span class="h-px w-8 bg-orange"></span>
+          Integrity Meets Precision
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:80ms">
+        <h1 class="font-head font-black uppercase leading-[0.9] tracking-tight text-[clamp(2.5rem,6vw,5.5rem)] text-charcoal-900">
+          Handyman &amp;<br/>
+          <span class="relative inline-block">
+            <span class="relative z-10">Renovation</span>
+            <span class="absolute inset-x-0 bottom-1 h-3 bg-orange/80 -z-0"></span>
+          </span><br/>
+          <span class="text-orange">Done Right.</span>
+        </h1>
+      </div>
+      <div class="reveal" style="transition-delay:150ms">
+        <p class="mt-6 text-base md:text-lg max-w-xl leading-relaxed text-charcoal-700">
+          One crew for every project on your list — from a leaky faucet to a full kitchen remodel. Gainesville-local, straightforward quotes, and work you'd be proud to show off.
+        </p>
+      </div>
+      <div class="reveal" style="transition-delay:220ms">
+        <ul class="mt-8 grid sm:grid-cols-2 gap-3 max-w-xl">
+          <li class="flex items-start gap-3 text-charcoal-900"><span class="mt-0.5 w-6 h-6 flex-none bg-orange flex items-center justify-center"><i data-icon="check" data-size="14" data-stroke="3" class="text-charcoal-900"></i></span><span class="text-sm font-medium">Licensed &amp; insured craftsmanship</span></li>
+          <li class="flex items-start gap-3 text-charcoal-900"><span class="mt-0.5 w-6 h-6 flex-none bg-orange flex items-center justify-center"><i data-icon="check" data-size="14" data-stroke="3" class="text-charcoal-900"></i></span><span class="text-sm font-medium">Free, no-pressure estimates</span></li>
+          <li class="flex items-start gap-3 text-charcoal-900"><span class="mt-0.5 w-6 h-6 flex-none bg-orange flex items-center justify-center"><i data-icon="check" data-size="14" data-stroke="3" class="text-charcoal-900"></i></span><span class="text-sm font-medium">One call — from fix-it to full renovation</span></li>
+          <li class="flex items-start gap-3 text-charcoal-900"><span class="mt-0.5 w-6 h-6 flex-none bg-orange flex items-center justify-center"><i data-icon="check" data-size="14" data-stroke="3" class="text-charcoal-900"></i></span><span class="text-sm font-medium">Serving Gainesville &amp; Alachua County</span></li>
+        </ul>
+      </div>
+      <div class="reveal" style="transition-delay:300ms">
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#contact" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-7 py-4 text-sm">
+            Get a Free Quote <i data-icon="arrow" data-size="16" data-stroke="2.2"></i>
+          </a>
+          <a href="tel:9123240658" class="group inline-flex items-center gap-3 text-charcoal-900 hover:text-orange transition-colors">
+            <span class="w-12 h-12 rounded-full border-2 border-current flex items-center justify-center group-hover:bg-orange group-hover:border-orange">
+              <i data-icon="phone" data-size="18"></i>
+            </span>
+            <span class="text-left">
+              <span class="block font-stamp text-[10px] tracking-[0.3em] uppercase opacity-70">Call or text</span>
+              <span class="block font-head font-bold">(912) 324-0658</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:400ms">
+        <div class="mt-12 pt-8 border-t border-charcoal-900/10 grid grid-cols-3 max-w-xl">
+          <div class="flex flex-col">
+            <span class="font-head font-black text-2xl md:text-3xl text-charcoal-900">150+</span>
+            <span class="font-stamp text-[10px] tracking-[0.25em] uppercase mt-1 text-charcoal-600">Projects delivered</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-head font-black text-2xl md:text-3xl text-charcoal-900">5.0★</span>
+            <span class="font-stamp text-[10px] tracking-[0.25em] uppercase mt-1 text-charcoal-600">Avg. rating</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-head font-black text-2xl md:text-3xl text-charcoal-900">24h</span>
+            <span class="font-stamp text-[10px] tracking-[0.25em] uppercase mt-1 text-charcoal-600">Quote turnaround</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Zak photo -->
+    <div class="relative">
+      <div class="reveal" style="transition-delay:100ms">
+        <div class="relative">
+          <div class="absolute -top-6 -right-6 w-2/3 h-2/3 bg-orange" aria-hidden="true"></div>
+          <div class="relative bg-charcoal-800 corners overflow-hidden">
+            <div class="aspect-[4/5] relative">
+              <div class="absolute inset-0 grid-overlay-strong opacity-90 pointer-events-none" aria-hidden="true"></div>
+              <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.65) 100%)" aria-hidden="true"></div>
+              <img src="assets/zak.png" alt="Zak Ford, owner of Enigmatic Solutions"
+                   class="absolute inset-x-0 bottom-0 w-full h-full object-contain object-bottom z-10" />
+              <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-charcoal-900/80 to-transparent z-20"></div>
+              <div class="absolute left-4 bottom-4 right-4 flex items-end justify-between z-30">
+                <div>
+                  <div class="font-stamp text-[10px] tracking-[0.35em] uppercase text-orange">Owner · Operator</div>
+                  <div class="font-head font-black text-bone-100 text-2xl uppercase leading-none mt-1">Zak Ford</div>
+                </div>
+                <div class="stamp-edge text-orange font-stamp text-[9px]">Est. 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- floating stamp badge, left-edge, rotate -6deg -->
+      <div class="reveal" style="transition-delay:250ms">
+        <div class="absolute -left-8 md:-left-16 lg:-left-20 top-1/2 -translate-y-1/2 p-4 w-44 shadow-2xl hidden md:block z-40 bg-orange text-charcoal-900 ring-2 ring-charcoal-900/10"
+             style="transform: rotate(-6deg)">
+          <div class="font-stamp text-[10px] tracking-[0.3em] uppercase">Free Estimate</div>
+          <div class="font-head font-black text-xl leading-tight mt-1">Same-Day Response</div>
+          <div class="mt-2 flex items-center gap-1">
+            <i data-icon="star" data-size="12"></i><i data-icon="star" data-size="12"></i><i data-icon="star" data-size="12"></i><i data-icon="star" data-size="12"></i><i data-icon="star" data-size="12"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="mt-16 md:mt-20 border-y border-charcoal-900/15 text-charcoal-700 overflow-hidden">
+    <div class="flex ticker-track whitespace-nowrap py-4" id="hero-ticker"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="relative bg-charcoal-900 text-bone-100 py-24 md:py-32 overflow-hidden">
+  <div class="absolute inset-0 grid-overlay-dim opacity-50"></div>
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="reveal">
+      <div class="text-center mx-auto max-w-3xl mb-12 md:mb-16">
+        <div class="font-stamp text-xs tracking-[0.4em] uppercase text-orange flex items-center gap-3 justify-center">
+          <span class="h-px w-10 bg-orange inline-block"></span>
+          What We Do
+          <span class="h-px w-10 bg-orange inline-block"></span>
+        </div>
+        <h2 class="mt-4 font-head font-black uppercase tracking-tight leading-[0.95] text-4xl md:text-5xl lg:text-6xl text-bone-100">
+          Providing professional services<br/><span class="text-orange">for your entire home.</span>
+        </h2>
+        <p class="mt-5 text-base md:text-lg leading-relaxed text-bone-200/60">
+          From a single afternoon repair to a months-long remodel, Zak handles the scope so you don't have to chase five different trades.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-px bg-white/10 border border-white/10" id="services-grid"></div>
+
+    <div class="mt-14 grid md:grid-cols-4 gap-6" id="trust-strip"></div>
+
+    <div class="mt-14 text-center">
+      <a href="#contact" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-7 py-4 text-sm">
+        Not sure? Just ask. <i data-icon="arrow" data-size="16" data-stroke="2.2"></i>
+      </a>
+      <div class="mt-3 font-stamp text-[11px] tracking-[0.3em] uppercase text-bone-200/60">
+        If it's in your house, chances are we fix it.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="projects" class="relative bg-bone-100 py-24 md:py-32 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="reveal">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="font-stamp text-xs tracking-[0.4em] uppercase text-orange flex items-center gap-3 mb-4">
+            <span class="h-px w-10 bg-orange"></span> Our Recent Work
+          </div>
+          <h2 class="font-head font-black uppercase tracking-tight leading-[0.95] text-4xl md:text-5xl lg:text-6xl text-charcoal-900">
+            Built by hand.<br/><span class="text-orange">Finished to last.</span>
+          </h2>
+        </div>
+        <div class="flex flex-wrap gap-2" id="gallery-filters"></div>
+      </div>
+    </div>
+
+    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px] md:auto-rows-[220px]"></div>
+
+    <div class="mt-12 text-center">
+      <a href="#contact" class="cta-orange inline-flex items-center gap-2 border-2 border-charcoal-800 text-charcoal-800 hover:bg-charcoal-800 hover:text-white font-head font-bold uppercase tracking-[0.14em] px-6 py-3 text-sm">
+        View more projects <i data-icon="arrow" data-size="16" data-stroke="2.2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="reviews" class="relative bg-bone-50 py-24 md:py-32 overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-1 bg-orange"></div>
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="reveal">
+      <div class="text-center mx-auto max-w-3xl mb-12 md:mb-16">
+        <div class="font-stamp text-xs tracking-[0.4em] uppercase text-orange flex items-center gap-3 justify-center">
+          <span class="h-px w-10 bg-orange inline-block"></span>
+          What Clients Say
+          <span class="h-px w-10 bg-orange inline-block"></span>
+        </div>
+        <h2 class="mt-4 font-head font-black uppercase tracking-tight leading-[0.95] text-4xl md:text-5xl lg:text-6xl text-charcoal-800">
+          Trusted by neighbors,<br/><span class="text-orange">recommended by name.</span>
+        </h2>
+        <p class="mt-5 text-base md:text-lg leading-relaxed text-charcoal-600">
+          Gainesville is a small town when it comes to good contractors. Here's what yours are saying.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:100ms">
+      <div id="testimonials-cards" class="t-cards grid lg:grid-cols-3 gap-6 md:gap-8"></div>
+    </div>
+
+    <div class="mt-10 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button id="t-prev" aria-label="Previous" class="w-12 h-12 border-2 border-charcoal-900 text-charcoal-900 hover:bg-orange hover:border-orange hover:text-white flex items-center justify-center transition-colors">
+          <i data-icon="chevron-l" data-size="18" data-stroke="2.2"></i>
+        </button>
+        <button id="t-next" aria-label="Next" class="w-12 h-12 border-2 border-charcoal-900 text-charcoal-900 hover:bg-orange hover:border-orange hover:text-white flex items-center justify-center transition-colors">
+          <i data-icon="chevron-r" data-size="18" data-stroke="2.2"></i>
+        </button>
+        <div id="t-counter" class="font-stamp text-[11px] tracking-[0.3em] uppercase text-charcoal-600 ml-2">01 / 06</div>
+      </div>
+      <div class="flex items-center gap-3 text-charcoal-700">
+        <div class="flex gap-0.5 text-orange">
+          <i data-icon="star" data-size="14"></i><i data-icon="star" data-size="14"></i><i data-icon="star" data-size="14"></i><i data-icon="star" data-size="14"></i><i data-icon="star" data-size="14"></i>
+        </div>
+        <span class="font-head font-bold text-sm uppercase tracking-wider">5.0 avg · Google Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<section id="area" class="relative bg-charcoal-900 text-bone-100 py-24 md:py-32 overflow-hidden">
+  <div class="absolute inset-0 grid-overlay-dim opacity-30"></div>
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <div class="font-stamp text-xs tracking-[0.4em] uppercase text-orange flex items-center gap-3 mb-4">
+        <span class="h-px w-10 bg-orange"></span> Where We Work
+      </div>
+      <h2 class="font-head font-black uppercase leading-[0.95] tracking-tight text-4xl md:text-5xl lg:text-6xl">
+        Serving all of<br/><span class="text-orange">Alachua County.</span>
+      </h2>
+      <p class="mt-5 text-bone-200/70 text-base md:text-lg leading-relaxed max-w-lg">
+        Based in Gainesville. Happy to drive — if it's within the county line, we're your crew. Not sure? Ask and we'll tell you straight.
+      </p>
+
+      <div id="area-chips" class="mt-8 flex flex-wrap gap-2 max-w-lg"></div>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#contact" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-6 py-3 text-sm">Check my area <i data-icon="arrow" data-size="16" data-stroke="2.2"></i></a>
+        <a href="tel:9123240658" class="inline-flex items-center gap-2 text-bone-100 hover:text-orange font-head font-bold text-sm uppercase tracking-wider">
+          <i data-icon="phone" data-size="16"></i> (912) 324-0658
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:120ms">
+      <div class="relative aspect-[5/4] bg-charcoal-800 border border-white/10 overflow-hidden corners">
+        <div class="absolute inset-0 grid-overlay opacity-40"></div>
+        <svg viewBox="0 0 100 80" class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+          <path d="M10 18 L28 12 L52 10 L72 14 L86 22 L88 40 L82 60 L68 70 L44 72 L22 68 L12 52 L10 35 Z"
+                fill="rgba(255,107,0,0.08)" stroke="#ff6b00" stroke-width="0.4" stroke-dasharray="1 1" />
+          <text x="76" y="20" fill="rgba(243,237,226,0.35)" font-size="2" font-family="monospace" letter-spacing="0.4">ALACHUA CO.</text>
+          <text x="16" y="76" fill="rgba(243,237,226,0.35)" font-size="2" font-family="monospace" letter-spacing="0.4">FLORIDA · USA</text>
+          <g transform="translate(90 12)">
+            <circle r="3" fill="none" stroke="#ff6b00" stroke-width="0.3" />
+            <path d="M0 -3 L0.6 0 L0 3 L-0.6 0 Z" fill="#ff6b00" />
+            <text x="0" y="-4" text-anchor="middle" fill="#ff6b00" font-size="1.6" font-family="monospace">N</text>
+          </g>
+        </svg>
+        <div id="map-pins" class="absolute inset-0"></div>
+        <div class="absolute bottom-3 right-3 font-stamp text-[9px] tracking-[0.3em] uppercase text-bone-200/50 flex items-center gap-1">
+          <span class="w-8 h-0.5 bg-bone-200/50"></span> 10 mi
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section id="contact" class="relative bg-bone-100 py-24 md:py-32 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8 grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-stretch">
+    <div class="reveal">
+      <div class="relative h-full">
+        <div class="relative bg-charcoal-800 aspect-[4/5] lg:aspect-auto lg:h-full overflow-hidden corners">
+          <div class="ph absolute inset-0 ph-stripes-dark flex items-center justify-center">
+            <div class="text-center px-4">
+              <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-bone-200/60">photo placeholder</div>
+              <div class="mt-1 font-head font-black uppercase text-bone-100 text-lg">Handyman on the job</div>
+              <div class="mt-2 font-stamp text-[11px] tracking-[0.3em] uppercase text-orange">tools · dust · satisfaction</div>
+            </div>
+          </div>
+          <div class="absolute inset-0 grid-overlay mix-blend-screen opacity-40"></div>
+          <div class="absolute left-6 right-6 bottom-6 bg-bone-50 p-6 border-l-4 border-orange">
+            <i data-icon="quote" data-size="24" class="text-orange"></i>
+            <div class="mt-3 font-head font-bold text-charcoal-900 text-lg leading-snug">
+              "Quote fairly. Show up on time. Finish it the way I'd want it in my own house."
+            </div>
+            <div class="mt-3 font-stamp text-[10px] tracking-[0.3em] uppercase text-charcoal-600">— Zak Ford, Owner</div>
+          </div>
+          <div class="absolute top-5 left-5 stamp-edge text-orange font-stamp text-[10px] tracking-[0.3em]">
+            Free · No Pressure
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:100ms">
+      <div class="bg-charcoal-900 text-bone-100 p-8 md:p-10 lg:p-12 relative overflow-hidden h-full">
+        <div class="absolute top-0 right-0 grid-overlay-dim w-40 h-40 opacity-40"></div>
+        <div class="font-stamp text-xs tracking-[0.4em] uppercase text-orange flex items-center gap-3 mb-3">
+          <span class="h-px w-8 bg-orange"></span> Request a Free Quote
+        </div>
+        <h2 class="font-head font-black uppercase leading-[0.95] tracking-tight text-3xl md:text-4xl">
+          Tell us about<br/><span class="text-orange">your project.</span>
+        </h2>
+        <p class="mt-3 text-bone-200/70 text-sm leading-relaxed max-w-md">
+          We'll reach out within 24 hours with next steps. Or call anytime at <a href="tel:9123240658" class="text-orange font-bold">(912) 324-0658</a>.
+        </p>
+
+        <div id="stepper" class="mt-8 flex items-center gap-2 text-[10px] font-stamp tracking-[0.3em] uppercase"></div>
+
+        <!-- STEP 1 -->
+        <div id="step-1" class="mt-8 space-y-5">
+          <label class="block">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-stamp text-[10px] tracking-[0.3em] uppercase text-bone-200/60">Your name</span>
+              <span data-err="name" class="text-orange text-[10px] font-head font-bold uppercase tracking-wider"></span>
+            </div>
+            <input name="name" type="text" placeholder="Jane Doe" class="w-full bg-transparent border-b-2 border-white/15 focus:border-orange py-2 outline-none text-bone-100 placeholder:text-bone-200/30" />
+          </label>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <label class="block">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-stamp text-[10px] tracking-[0.3em] uppercase text-bone-200/60">Email</span>
+                <span data-err="email" class="text-orange text-[10px] font-head font-bold uppercase tracking-wider"></span>
+              </div>
+              <input name="email" type="email" placeholder="you@email.com" class="w-full bg-transparent border-b-2 border-white/15 focus:border-orange py-2 outline-none text-bone-100 placeholder:text-bone-200/30" />
+            </label>
+            <label class="block">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-stamp text-[10px] tracking-[0.3em] uppercase text-bone-200/60">Phone</span>
+                <span data-err="phone" class="text-orange text-[10px] font-head font-bold uppercase tracking-wider"></span>
+              </div>
+              <input name="phone" type="tel" placeholder="(352) 000-0000" class="w-full bg-transparent border-b-2 border-white/15 focus:border-orange py-2 outline-none text-bone-100 placeholder:text-bone-200/30" />
+            </label>
+          </div>
+          <div class="pt-2 flex items-center justify-end">
+            <button id="step-1-next" type="button" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-6 py-3 text-sm">
+              Continue <i data-icon="arrow" data-size="16" data-stroke="2.2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <form id="step-2" class="mt-8 space-y-5 hidden">
+          <label class="block">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-stamp text-[10px] tracking-[0.3em] uppercase text-bone-200/60">Service needed</span>
+              <span data-err="service" class="text-orange text-[10px] font-head font-bold uppercase tracking-wider"></span>
+            </div>
+            <div id="service-chips" class="flex flex-wrap gap-2"></div>
+          </label>
+          <label class="block">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-stamp text-[10px] tracking-[0.3em] uppercase text-bone-200/60">Tell us about the project</span>
+              <span data-err="message" class="text-orange text-[10px] font-head font-bold uppercase tracking-wider"></span>
+            </div>
+            <textarea name="message" rows="4" placeholder="Leaky shower, want to retile the surround. 30s tenant photos available..." class="w-full bg-charcoal-800 border border-white/10 focus:border-orange rounded-none p-3 outline-none text-bone-100 placeholder:text-bone-200/30 text-sm"></textarea>
+          </label>
+          <div class="pt-2 flex items-center justify-between">
+            <button type="button" id="step-2-back" class="text-bone-200/60 hover:text-orange font-head font-bold text-xs uppercase tracking-wider flex items-center gap-1">
+              <i data-icon="chevron-l" data-size="14"></i> Back
+            </button>
+            <button type="submit" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-6 py-3 text-sm">
+              Send Quote Request <i data-icon="arrow" data-size="16" data-stroke="2.2"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- STEP 3 -->
+        <div id="step-3" class="mt-10 text-center py-6 hidden">
+          <div class="w-16 h-16 mx-auto bg-orange flex items-center justify-center">
+            <i data-icon="check" data-size="32" data-stroke="3" class="text-charcoal-900"></i>
+          </div>
+          <div class="mt-5 font-head font-black uppercase text-2xl">Request received.</div>
+          <p class="mt-3 text-bone-200/70 text-sm max-w-sm mx-auto">
+            Thanks, <span id="thanks-name">neighbor</span>. Zak will personally reach out within 24 hours — usually much sooner.
+          </p>
+          <div class="mt-6 font-stamp text-[11px] tracking-[0.3em] uppercase text-orange">Need us sooner?</div>
+          <a href="tel:9123240658" class="mt-2 inline-flex items-center gap-2 font-head font-black text-xl text-bone-100 hover:text-orange">
+            <i data-icon="phone" data-size="18"></i> (912) 324-0658
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="relative bg-charcoal-900 text-bone-100 pt-20 pb-8 overflow-hidden">
+  <div class="absolute inset-0 grid-overlay-dim opacity-20"></div>
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="mb-16 pb-12 border-b border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="font-stamp text-xs tracking-[0.4em] uppercase text-orange">Integrity Meets Precision</div>
+        <div class="mt-2 font-head font-black uppercase text-3xl md:text-4xl leading-tight">Got a list? <span class="text-orange">Let's knock it out.</span></div>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="#contact" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-7 py-4 text-sm">
+          Request a Quote <i data-icon="arrow" data-size="16" data-stroke="2.2"></i>
+        </a>
+        <a href="tel:9123240658" class="inline-flex items-center gap-3 border-2 border-bone-100/30 hover:border-orange px-6 py-4 font-head font-bold uppercase tracking-[0.14em] text-sm">
+          <i data-icon="phone" data-size="16"></i> (912) 324-0658
+        </a>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-10 md:gap-8">
+      <div class="md:col-span-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-orange flex items-center justify-center text-charcoal-900 font-head font-black text-lg rotate-3">ES</div>
+          <div class="leading-tight">
+            <div class="font-head font-black uppercase text-lg tracking-wider">Enigmatic Solutions</div>
+            <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-orange">Handyman Services · Est. 2024</div>
+          </div>
+        </div>
+        <p class="mt-5 text-bone-200/60 text-sm leading-relaxed max-w-sm">
+          Family-run handyman &amp; renovation in Gainesville, FL. Owned &amp; operated by Zak Ford — licensed, insured, and grateful for every job.
+        </p>
+        <div class="mt-5 flex items-center gap-3">
+          <a href="#" class="w-10 h-10 border border-white/15 flex items-center justify-center hover:bg-orange hover:border-orange hover:text-charcoal-900 transition-colors" aria-label="Facebook"><i data-icon="facebook" data-size="16"></i></a>
+          <a href="#" class="w-10 h-10 border border-white/15 flex items-center justify-center hover:bg-orange hover:border-orange hover:text-charcoal-900 transition-colors" aria-label="Instagram"><i data-icon="insta" data-size="16"></i></a>
+          <a href="#" class="w-10 h-10 border border-white/15 flex items-center justify-center hover:bg-orange hover:border-orange hover:text-charcoal-900 transition-colors" aria-label="Google"><i data-icon="google" data-size="16"></i></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-orange mb-4">Navigate</div>
+        <ul class="space-y-2.5 text-sm text-bone-200/70">
+          <li><a href="#services" class="hover:text-orange transition-colors">Services</a></li>
+          <li><a href="#projects" class="hover:text-orange transition-colors">Projects</a></li>
+          <li><a href="#reviews" class="hover:text-orange transition-colors">Reviews</a></li>
+          <li><a href="#area" class="hover:text-orange transition-colors">Service Area</a></li>
+          <li><a href="#contact" class="hover:text-orange transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-orange mb-4">Popular Services</div>
+        <ul class="space-y-2.5 text-sm text-bone-200/70">
+          <li><a href="#services" class="hover:text-orange transition-colors">Kitchen Remodel</a></li>
+          <li><a href="#services" class="hover:text-orange transition-colors">Bath Remodel</a></li>
+          <li><a href="#services" class="hover:text-orange transition-colors">Carpentry &amp; Trim</a></li>
+          <li><a href="#services" class="hover:text-orange transition-colors">Plumbing Repair</a></li>
+          <li><a href="#services" class="hover:text-orange transition-colors">Electrical</a></li>
+          <li><a href="#services" class="hover:text-orange transition-colors">Drywall &amp; Paint</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-orange mb-4">Get In Touch</div>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3"><i data-icon="phone" data-size="16" class="text-orange mt-0.5 flex-none"></i><a href="tel:9123240658" class="text-bone-100 font-bold hover:text-orange">(912) 324-0658</a></li>
+          <li class="flex items-start gap-3"><i data-icon="mail" data-size="16" class="text-orange mt-0.5 flex-none"></i><a href="mailto:hello@enigmaticsolutions.co" class="text-bone-200/70 hover:text-orange">hello@enigmaticsolutions.co</a></li>
+          <li class="flex items-start gap-3"><i data-icon="pin" data-size="16" class="text-orange mt-0.5 flex-none"></i><span class="text-bone-200/70">Gainesville, FL<br/>Serving Alachua County</span></li>
+          <li class="flex items-start gap-3"><i data-icon="clock" data-size="16" class="text-orange mt-0.5 flex-none"></i><span class="text-bone-200/70">Mon–Sat · 7a–7p<br/><span class="text-orange text-xs font-bold uppercase tracking-wider">Emergency service avail.</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-stamp tracking-[0.3em] uppercase text-bone-200/40">
+      <div>© 2026 Enigmatic Solutions LLC · All Rights Reserved</div>
+      <div class="flex items-center gap-4">
+        <span>Licensed · Insured · FL</span>
+        <span class="w-1 h-1 bg-orange rotate-45"></span>
+        <span>Integrity Meets Precision</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Gallery lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[90] bg-charcoal-900/90 backdrop-blur items-center justify-center p-4 hidden">
+  <div id="lightbox-inner" class="relative max-w-3xl w-full">
+    <button id="lightbox-close" class="absolute -top-12 right-0 text-bone-100 hover:text-orange" aria-label="Close">
+      <i data-icon="x" data-size="28"></i>
+    </button>
+    <div id="lightbox-image" class="relative"></div>
+    <div class="mt-4 text-bone-100 flex items-center justify-between">
+      <div>
+        <div id="lightbox-meta" class="font-stamp text-[10px] tracking-[0.3em] uppercase text-orange"></div>
+        <div id="lightbox-title" class="font-head font-black uppercase text-2xl"></div>
+      </div>
+      <a href="#contact" id="lightbox-cta" class="cta-orange inline-flex items-center gap-2 bg-orange text-white font-head font-bold uppercase tracking-[0.14em] px-4 py-2 text-xs">
+        Start a project like this <i data-icon="arrow" data-size="14" data-stroke="2.2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= ICONS ================= */
+const ICON_PATHS = {
+  wrench:  '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.6-2.6 2.3-2.3z"/>',
+  bolt:    '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/>',
+  roller:  '<rect x="3" y="4" width="18" height="6" rx="1"/><path d="M7 10v3h5v8"/><path d="M12 13h0"/>',
+  saw:     '<path d="M3 7 21 7l-2 4-3-2-2 2-3-2-2 2-3-2-2 2L3 7z"/><path d="M3 7v10l6 4h12V11"/>',
+  tile:    '<rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/>',
+  hammer:  '<path d="m15 12-8.5 8.5a2.1 2.1 0 0 1-3-3L12 9"/><path d="m17.6 8.4-2-2a2 2 0 0 1 0-2.8L16.8 2.4a2 2 0 0 1 2.8 0l4 4a2 2 0 0 1 0 2.8l-1.2 1.2a2 2 0 0 1-2.8 0l-2-2"/>',
+  drill:   '<path d="M3 7h10v6H3z"/><path d="M13 9h4l3-2v8l-3-2h-4"/><path d="M6 13v4h3"/>',
+  door:    '<path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17"/><path d="M3 21h18"/><circle cx="15" cy="12" r=".8" fill="currentColor"/>',
+  shower:  '<path d="M4 20v-8a6 6 0 0 1 12 0"/><path d="M10 6V3h4"/><path d="M14 3h4"/><circle cx="6" cy="16" r=".6" fill="currentColor"/><circle cx="10" cy="14" r=".6" fill="currentColor"/><circle cx="14" cy="16" r=".6" fill="currentColor"/>',
+  house:   '<path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+  check:   '<path d="m4 12 5 5L20 6"/>',
+  arrow:   '<path d="M5 12h14"/><path d="m13 5 7 7-7 7"/>',
+  phone:   '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/>',
+  mail:    '<rect x="2" y="4" width="20" height="16"/><path d="m2 6 10 7 10-7"/>',
+  pin:     '<path d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/>',
+  star:    '<path d="m12 2 3 7h7l-5.6 4.3L18 21l-6-4-6 4 1.6-7.7L2 9h7z" fill="currentColor"/>',
+  menu:    '<path d="M3 6h18M3 12h18M3 18h18"/>',
+  x:       '<path d="M6 6l12 12M18 6 6 18"/>',
+  'chevron-l': '<path d="m15 18-6-6 6-6"/>',
+  'chevron-r': '<path d="m9 18 6-6-6-6"/>',
+  shield:  '<path d="M12 2 4 5v7c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/>',
+  award:   '<circle cx="12" cy="9" r="6"/><path d="m8 14-2 8 6-3 6 3-2-8"/>',
+  clock:   '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  dollar:  '<path d="M12 2v20"/><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/>',
+  facebook:'<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+  insta:   '<rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>',
+  google:  '<path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v6h-6"/>',
+  quote:   '<path d="M7 7h4v4H7a2 2 0 0 0-2 2v4"/><path d="M15 7h4v4h-4a2 2 0 0 0-2 2v4"/>',
+};
+
+function renderIcons(root = document) {
+  root.querySelectorAll('i[data-icon]').forEach((el) => {
+    if (el.dataset.iconRendered) return;
+    const name = el.dataset.icon;
+    const size = el.dataset.size || 24;
+    const stroke = el.dataset.stroke || 1.75;
+    const path = ICON_PATHS[name] || '';
+    const cls = el.className || '';
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${stroke}" stroke-linecap="square" stroke-linejoin="miter" class="${cls}" style="display:inline-block;vertical-align:middle">${path}</svg>`;
+    el.outerHTML = svg;
+  });
+}
+
+/* ================= DATA-DRIVEN SECTIONS ================= */
+const SERVICES = [
+  { icon: 'wrench',  name: 'Plumbing',     desc: 'Leaks, fixtures, water heaters, repipes.' },
+  { icon: 'bolt',    name: 'Electrical',   desc: 'Outlets, fixtures, panels, troubleshooting.' },
+  { icon: 'roller',  name: 'Painting',     desc: 'Interior & exterior, cabinets, trim.' },
+  { icon: 'saw',     name: 'Carpentry',    desc: 'Trim, custom builds, repairs.' },
+  { icon: 'tile',    name: 'Tiling',       desc: 'Floors, backsplashes, showers.' },
+  { icon: 'hammer',  name: 'Drywall',      desc: 'Patches, hangs, full textures & finish.' },
+  { icon: 'drill',   name: 'Assembly',     desc: 'Furniture, mounts, storage, sheds.' },
+  { icon: 'door',    name: 'Doors & Trim', desc: 'Install, replace, re-hang, re-finish.' },
+  { icon: 'shower',  name: 'Bath Remodel', desc: 'Full gut-and-go or targeted refresh.' },
+  { icon: 'house',   name: 'Kitchen Reno', desc: 'Cabinets, counters, layout, lighting.' },
+];
+
+const TRUST = [
+  { icon: 'shield', title: 'Licensed & Insured',   sub: 'Florida DBPR · General liability' },
+  { icon: 'clock',  title: 'Same-Day Response',    sub: 'Most quotes within 24 hours' },
+  { icon: 'dollar', title: 'Transparent Pricing',  sub: 'Flat rates. No surprise line items.' },
+  { icon: 'award',  title: 'Satisfaction First',   sub: "We don't leave till you're happy" },
+];
+
+const GALLERY = [
+  { cat: 'Kitchen',   label: 'Kitchen Remodel',   sub: 'Haile Plantation', size: 'lg' },
+  { cat: 'Bath',      label: 'Master Bath',       sub: 'NW Gainesville',   size: 'md' },
+  { cat: 'Carpentry', label: 'Built-In Shelving', sub: 'Duck Pond',        size: 'md' },
+  { cat: 'Exterior',  label: 'Deck Rebuild',      sub: 'Jonesville',       size: 'md' },
+  { cat: 'Kitchen',   label: 'Cabinet Refinish',  sub: 'SW 34th',          size: 'md' },
+  { cat: 'Bath',      label: 'Walk-In Shower',    sub: 'Tower Rd.',        size: 'md' },
+  { cat: 'Carpentry', label: 'Custom Mantel',     sub: 'Mill Creek',       size: 'sm' },
+  { cat: 'Exterior',  label: 'Fence & Gate',      sub: 'Alachua',          size: 'lg' },
+  { cat: 'Bath',      label: 'Tile Backsplash',   sub: 'Midtown',          size: 'sm' },
+];
+const GALLERY_CATS = ['All', 'Kitchen', 'Bath', 'Carpentry', 'Exterior'];
+
+const REVIEWS = [
+  { name: 'Marcus R.',      neigh: 'Haile Plantation', rating: 5, text: "Zak rebuilt our back deck in one weekend and found rot the previous guy missed. Fair price, zero BS, and the craftsmanship shows." },
+  { name: 'Priya S.',       neigh: 'Duck Pond',        rating: 5, text: "We had a list a mile long after moving in. Zak knocked it out in two days — doors, trim, outlet that never worked, the leaky shower. Just a relief." },
+  { name: 'The Hendersons', neigh: 'Jonesville',       rating: 5, text: "Gut-renovated our kids' bathroom. Communication was constant, timeline was honest, and the finish work is better than the original." },
+  { name: 'Dana K.',        neigh: 'Tower Rd.',        rating: 5, text: "Called Tuesday about a running toilet and a ceiling patch — fixed Thursday morning. Respectful, clean, and actually listens to what you want." },
+  { name: 'Elliot M.',      neigh: 'Midtown GNV',      rating: 5, text: "Kitchen backsplash and new pendants. Enigmatic was half the quote of the bigger outfits and twice as careful with our floors." },
+  { name: 'Sophia L.',      neigh: 'NW Gainesville',   rating: 5, text: "Honest, talented, and actually shows up when he says he will. I keep Zak's number in my favorites now." },
+];
+
+const AREAS = ['Gainesville','Haile Plantation','Jonesville','Newberry','Alachua','High Springs','Archer','Tower Road','Midtown','Duck Pond','NW Gainesville','SW 34th','Mill Creek','Tioga','Micanopy'];
+
+const PINS = [
+  { x: 48, y: 50, label: 'HQ · Gainesville', big: true },
+  { x: 32, y: 55, label: 'Jonesville' },
+  { x: 22, y: 58, label: 'Newberry' },
+  { x: 28, y: 38, label: 'Alachua' },
+  { x: 40, y: 26, label: 'High Springs' },
+  { x: 58, y: 62, label: 'Micanopy' },
+  { x: 66, y: 42, label: 'Hawthorne' },
+  { x: 38, y: 68, label: 'Archer' },
+];
+
+const SERVICE_OPTIONS = ['Plumbing','Electrical','Painting','Carpentry','Tiling','Drywall','Kitchen Remodel','Bath Remodel','Doors & Trim','Other'];
+
+const TICKER_WORDS = ['Plumbing','Electrical','Carpentry','Tiling','Painting','Drywall','Remodels','Decks & Fences','Doors & Trim','Pressure Washing'];
+
+/* ================= BUILDERS ================= */
+function buildServices() {
+  const grid = document.getElementById('services-grid');
+  grid.innerHTML = SERVICES.map((s, i) => `
+    <div class="reveal" style="transition-delay:${i*40}ms">
+      <div class="group bg-charcoal-900 hover:bg-charcoal-800 p-6 md:p-8 h-full flex flex-col items-center text-center transition-colors cursor-default relative overflow-hidden">
+        <span class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-orange opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        <span class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-orange opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        <div class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-orange border border-orange/40 group-hover:bg-orange group-hover:text-charcoal-900 transition-colors">
+          <i data-icon="${s.icon}" data-size="28"></i>
+        </div>
+        <div class="mt-5 font-head font-black uppercase text-sm md:text-base tracking-wider">${s.name}</div>
+        <div class="mt-2 text-xs text-bone-200/60 leading-relaxed">${s.desc}</div>
+        <div class="mt-4 font-stamp text-[10px] tracking-[0.3em] uppercase text-orange opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+          Learn more <i data-icon="arrow" data-size="10"></i>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function buildTrustStrip() {
+  const el = document.getElementById('trust-strip');
+  el.innerHTML = TRUST.map((t, i) => `
+    <div class="reveal" style="transition-delay:${i*60}ms">
+      <div class="flex items-start gap-4 border-l-2 border-orange pl-4 py-2">
+        <i data-icon="${t.icon}" data-size="26" class="text-orange flex-none mt-1"></i>
+        <div>
+          <div class="font-head font-bold uppercase text-sm tracking-wider">${t.title}</div>
+          <div class="text-xs text-bone-200/60 mt-1">${t.sub}</div>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function buildTicker() {
+  const el = document.getElementById('hero-ticker');
+  const block = TICKER_WORDS.map(s => `<span class="flex items-center gap-6 px-6 font-head font-bold uppercase text-sm tracking-[0.25em]">${s}<span class="w-1.5 h-1.5 bg-orange rotate-45"></span></span>`).join('');
+  el.innerHTML = `<div class="flex items-center shrink-0">${block}</div><div class="flex items-center shrink-0">${block}</div>`;
+}
+
+/* ---- Gallery ---- */
+let galleryFilter = 'All';
+function buildGalleryFilters() {
+  const el = document.getElementById('gallery-filters');
+  el.innerHTML = GALLERY_CATS.map(c => `
+    <button data-cat="${c}" class="gallery-filter px-4 py-2 font-head font-bold uppercase text-[11px] tracking-[0.2em] border-2 transition-colors ${c === galleryFilter ? 'bg-charcoal-900 text-bone-50 border-charcoal-900' : 'border-charcoal-900/20 text-charcoal-700 hover:border-charcoal-900'}">${c}</button>
+  `).join('');
+  el.querySelectorAll('.gallery-filter').forEach(btn => {
+    btn.addEventListener('click', () => { galleryFilter = btn.dataset.cat; buildGalleryFilters(); buildGalleryGrid(); renderIcons(); });
+  });
+}
+function buildGalleryGrid() {
+  const grid = document.getElementById('gallery-grid');
+  const items = galleryFilter === 'All' ? GALLERY : GALLERY.filter(i => i.cat === galleryFilter);
+  grid.innerHTML = items.map((it, i) => {
+    const span = it.size === 'lg' ? 'col-span-2 row-span-2' : it.size === 'md' ? 'col-span-1 row-span-2' : 'col-span-1 row-span-1';
+    return `<div class="reveal ${span}" style="transition-delay:${i*40}ms">
+      <button data-g-idx="${GALLERY.indexOf(it)}" class="gallery-open gallery-item group relative w-full h-full overflow-hidden bg-bone-200 block text-left corners">
+        <div class="ph absolute inset-0 ph-stripes flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-charcoal-600 opacity-60">photo placeholder</div>
+            <div class="font-head font-black uppercase text-charcoal-800 text-sm md:text-base mt-1 tracking-wider">${it.label}</div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-charcoal-900/0 group-hover:bg-charcoal-900/75 transition-all duration-300 flex flex-col justify-end p-4 md:p-5 opacity-0 group-hover:opacity-100">
+          <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-orange">${it.cat}</div>
+          <div class="font-head font-black uppercase text-bone-50 text-base md:text-lg leading-tight mt-1">${it.label}</div>
+          <div class="text-xs text-bone-200/70 mt-1">${it.sub}</div>
+          <div class="mt-3 inline-flex items-center gap-2 text-orange font-head font-bold text-xs uppercase tracking-wider">
+            View project <i data-icon="arrow" data-size="12"></i>
+          </div>
+        </div>
+        <div class="absolute top-3 left-3 bg-charcoal-900 text-orange px-2 py-1 font-stamp text-[9px] tracking-[0.3em] uppercase">${it.cat}</div>
+      </button>
+    </div>`;
+  }).join('');
+  grid.querySelectorAll('.gallery-open').forEach(btn => btn.addEventListener('click', () => openLightbox(Number(btn.dataset.gIdx))));
+  // reveal-observer for new nodes
+  grid.querySelectorAll('.reveal').forEach(r => revealObserver.observe(r));
+}
+
+function openLightbox(idx) {
+  const it = GALLERY[idx];
+  if (!it) return;
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-meta').textContent = `${it.cat} · ${it.sub}`;
+  document.getElementById('lightbox-title').textContent = it.label;
+  document.getElementById('lightbox-image').innerHTML = `
+    <div class="ph relative w-full ph-stripes text-charcoal-700" style="aspect-ratio:16/10">
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 text-center px-4">
+        <div class="font-stamp text-[10px] tracking-[0.3em] uppercase opacity-60">placeholder</div>
+        <div class="font-head font-bold uppercase tracking-wider text-sm md:text-base">${it.label}</div>
+        <div class="font-stamp text-[11px] opacity-70">${it.sub}</div>
+      </div>
+      <span class="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-orange"></span>
+      <span class="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-orange"></span>
+      <span class="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-orange"></span>
+      <span class="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-orange"></span>
+    </div>`;
+  lb.classList.remove('hidden');
+  lb.classList.add('flex');
+}
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('hidden');
+  lb.classList.remove('flex');
+}
+document.getElementById('lightbox').addEventListener('click', (e) => { if (e.target.id === 'lightbox') closeLightbox(); });
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.getElementById('lightbox-cta').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ---- Testimonials ---- */
+let tIdx = 0;
+let tFirstRender = true;
+function buildTestimonials() {
+  const n = REVIEWS.length;
+  const el = document.getElementById('testimonials-cards');
+  const paint = () => {
+    const visible = [REVIEWS[tIdx], REVIEWS[(tIdx+1)%n], REVIEWS[(tIdx+2)%n]];
+    el.innerHTML = visible.map(r => `
+      <div class="bg-bone-100 border border-charcoal-900/10 p-7 md:p-8 relative">
+        <i data-icon="quote" data-size="32" class="text-orange"></i>
+        <div class="flex gap-0.5 mt-4 text-orange">
+          ${Array(r.rating).fill('<i data-icon="star" data-size="14"></i>').join('')}
+        </div>
+        <p class="mt-4 text-charcoal-800 leading-relaxed text-[15px]">"${r.text}"</p>
+        <div class="mt-6 pt-4 border-t border-charcoal-900/10 flex items-center justify-between">
+          <div>
+            <div class="font-head font-black uppercase text-sm tracking-wider text-charcoal-900">${r.name}</div>
+            <div class="font-stamp text-[10px] tracking-[0.3em] uppercase text-charcoal-600 mt-1">${r.neigh}</div>
+          </div>
+          <div class="text-orange"><i data-icon="google" data-size="18"></i></div>
+        </div>
+      </div>`).join('');
+    renderIcons(el);
+    el.classList.remove('swapping');
+    document.getElementById('t-counter').textContent = `${String(tIdx+1).padStart(2,'0')} / ${String(n).padStart(2,'0')}`;
+  };
+  if (tFirstRender) { tFirstRender = false; paint(); return; }
+  el.classList.add('swapping');
+  setTimeout(paint, 200);
+}
+document.getElementById('t-prev').addEventListener('click', () => { tIdx = (tIdx - 1 + REVIEWS.length) % REVIEWS.length; buildTestimonials(); });
+document.getElementById('t-next').addEventListener('click', () => { tIdx = (tIdx + 1) % REVIEWS.length; buildTestimonials(); });
+let tTimer = setInterval(() => { tIdx = (tIdx + 1) % REVIEWS.length; buildTestimonials(); }, 7000);
+
+/* ---- Service area chips + map pins ---- */
+function buildAreas() {
+  document.getElementById('area-chips').innerHTML = AREAS.map(a =>
+    `<span class="px-3 py-1.5 border border-white/15 text-bone-200/80 text-xs font-head font-bold uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors">${a}</span>`
+  ).join('');
+}
+function buildPins() {
+  document.getElementById('map-pins').innerHTML = PINS.map(p => {
+    if (p.big) {
+      return `<div class="absolute -translate-x-1/2 -translate-y-1/2 group" style="left:${p.x}%;top:${p.y}%">
+        <div class="relative">
+          <div class="absolute inset-0 bg-orange/30 rounded-full animate-ping" style="animation-duration:2.5s"></div>
+          <div class="relative w-5 h-5 bg-orange rounded-full border-2 border-charcoal-900"></div>
+        </div>
+        <div class="absolute top-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-orange text-charcoal-900 px-2 py-1 font-head font-black text-[10px] uppercase tracking-wider">${p.label}</div>
+      </div>`;
+    }
+    return `<div class="absolute -translate-x-1/2 -translate-y-1/2 group" style="left:${p.x}%;top:${p.y}%">
+      <div class="w-2.5 h-2.5 bg-bone-100 rotate-45 border border-charcoal-900"></div>
+      <div class="absolute top-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-stamp text-[9px] tracking-[0.25em] uppercase text-bone-200/70 group-hover:text-orange transition-colors">${p.label}</div>
+    </div>`;
+  }).join('');
+}
+
+/* ---- Quote form ---- */
+const form = { name: '', email: '', phone: '', service: '', message: '' };
+let step = 1;
+
+function renderStepper() {
+  const labels = ['Contact','Project','Done'];
+  document.getElementById('stepper').innerHTML = labels.map((label, i) => {
+    const n = i + 1, active = step === n, complete = step > n;
+    const box = `<div class="w-6 h-6 flex items-center justify-center border ${active ? 'bg-orange text-charcoal-900 border-orange' : complete ? 'bg-orange/20 border-orange text-orange' : 'border-white/20 text-bone-200/50'}">${complete ? '<i data-icon="check" data-size="12" data-stroke="3"></i>' : n}</div>`;
+    const text = `<span class="${active ? 'text-orange' : complete ? 'text-bone-200/80' : 'text-bone-200/40'}">${label}</span>`;
+    const sep = i < 2 ? `<span class="w-6 h-px ${complete ? 'bg-orange' : 'bg-white/20'}"></span>` : '';
+    return `<div class="flex items-center gap-2">${box}${text}${sep}</div>`;
+  }).join('');
+  renderIcons(document.getElementById('stepper'));
+}
+
+function buildServiceChips() {
+  const el = document.getElementById('service-chips');
+  el.innerHTML = SERVICE_OPTIONS.map(s =>
+    `<button type="button" data-service="${s}" class="service-chip px-3 py-1.5 text-xs font-head font-bold uppercase tracking-wider border transition-colors ${form.service === s ? 'bg-orange border-orange text-charcoal-900' : 'border-white/20 text-bone-200/70 hover:border-orange hover:text-orange'}">${s}</button>`
+  ).join('');
+  el.querySelectorAll('.service-chip').forEach(btn => {
+    btn.addEventListener('click', () => { form.service = btn.dataset.service; setErr('service', ''); buildServiceChips(); });
+  });
+}
+
+function setErr(k, msg) {
+  const el = document.querySelector(`[data-err="${k}"]`);
+  if (el) el.textContent = msg;
+}
+function clearErrors() { document.querySelectorAll('[data-err]').forEach(e => e.textContent = ''); }
+
+function validate1() {
+  clearErrors();
+  let ok = true;
+  if (!form.name.trim()) { setErr('name', 'Tell us your name'); ok = false; }
+  if (!form.email.trim() && !form.phone.trim()) { setErr('email', 'Email or phone required'); setErr('phone', ' '); ok = false; }
+  if (form.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email)) { setErr('email', 'Check this email'); ok = false; }
+  return ok;
+}
+function validate2() {
+  clearErrors();
+  let ok = true;
+  if (!form.service) { setErr('service', 'Pick one'); ok = false; }
+  if (!form.message.trim() || form.message.trim().length < 10) { setErr('message', 'A little more detail helps us quote'); ok = false; }
+  return ok;
+}
+
+function showStep(n) {
+  step = n;
+  document.getElementById('step-1').classList.toggle('hidden', n !== 1);
+  document.getElementById('step-2').classList.toggle('hidden', n !== 2);
+  document.getElementById('step-3').classList.toggle('hidden', n !== 3);
+  renderStepper();
+}
+
+document.querySelectorAll('#step-1 input').forEach(inp => {
+  inp.addEventListener('input', () => { form[inp.name] = inp.value; setErr(inp.name, ''); });
+});
+document.getElementById('step-1-next').addEventListener('click', () => { if (validate1()) showStep(2); });
+
+document.querySelector('#step-2 textarea').addEventListener('input', (e) => { form.message = e.target.value; setErr('message', ''); });
+document.getElementById('step-2-back').addEventListener('click', () => showStep(1));
+document.getElementById('step-2').addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (validate2()) {
+    document.getElementById('thanks-name').textContent = (form.name.split(' ')[0] || 'neighbor');
+    showStep(3);
+  }
+});
+
+/* ---- Header scroll ---- */
+const header = document.getElementById('site-header');
+const headerRow = document.getElementById('header-row');
+function onScroll() {
+  const scrolled = window.scrollY > 20;
+  header.classList.toggle('bg-charcoal-900/95', scrolled);
+  header.classList.toggle('backdrop-blur', scrolled);
+  header.classList.toggle('border-b', scrolled);
+  header.classList.toggle('border-white/5', scrolled);
+  headerRow.classList.toggle('h-16', scrolled);
+  headerRow.classList.toggle('h-20', !scrolled);
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ---- Mobile menu ---- */
+const menuBtn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+let menuOpen = false;
+function toggleMenu(force) {
+  menuOpen = typeof force === 'boolean' ? force : !menuOpen;
+  menuBtn.setAttribute('aria-expanded', String(menuOpen));
+  menu.classList.toggle('max-h-0', !menuOpen);
+  menu.classList.toggle('max-h-[500px]', menuOpen);
+  const iconEl = menuBtn.querySelector('svg');
+  const name = menuOpen ? 'x' : 'menu';
+  if (iconEl) {
+    iconEl.innerHTML = ICON_PATHS[name];
+  }
+}
+menuBtn.addEventListener('click', () => toggleMenu());
+document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+/* ---- Reveal on scroll ---- */
+document.documentElement.classList.add('js-ready');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      en.target.classList.add('in');
+      revealObserver.unobserve(en.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+function observeAllReveals() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (!el.classList.contains('in')) revealObserver.observe(el);
+  });
+  // safety fallback
+  setTimeout(() => document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')), 1800);
+}
+
+/* ================= INIT ================= */
+buildServices();
+buildTrustStrip();
+buildTicker();
+buildGalleryFilters();
+buildGalleryGrid();
+buildTestimonials();
+buildAreas();
+buildPins();
+buildServiceChips();
+renderStepper();
+renderIcons();
+observeAllReveals();
+</script>
+
+</body>
+</html>
